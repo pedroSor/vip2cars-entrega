@@ -1,0 +1,27 @@
+Asunto: TU_NOMBRE_COMPLETO + DNI
+
+Destinatarios:
+- sistemas@vip2cars.com
+- lcapcha@vip2cars.com
+- tatiana.contreras@vip2cars.com
+
+Cuerpo del mensaje:
+
+Hola,
+
+Adjunto/comparto el repositorio con mi entrega para la práctica de VIP2CARS.
+
+Repositorio: <PEGA_AQUI_EL_LINK_DEL_REPO>
+
+Instrucciones rápidas para ejecutar:
+1. Clonar el repositorio.
+2. Ejecutar `php migrate.php` para crear la base de datos.
+3. Ejecutar `php seed.php` para insertar datos de ejemplo.
+4. Levantar servidor: `php -S localhost:8000 -t public` y abrir `http://localhost:8000`.
+
+Usuario demo: No aplica (sin autenticación). Datos de ejemplo insertados por `seed.php`.
+
+Saludos,
+
+TU NOMBRE COMPLETO
+DNI: XXXXXXXX

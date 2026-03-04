@@ -1,0 +1,39 @@
+erDiagram
+    SURVEYS {
+        INTEGER id PK
+        TEXT title
+        TEXT description
+        DATETIME created_at
+    }
+    QUESTIONS {
+        INTEGER id PK
+        INTEGER survey_id FK
+        TEXT text
+        TEXT type
+        INTEGER required
+    }
+    OPTIONS {
+        INTEGER id PK
+        INTEGER question_id FK
+        TEXT text
+    }
+    RESPONSES {
+        INTEGER id PK
+        INTEGER survey_id FK
+        DATETIME submitted_at
+        TEXT metadata
+    }
+    ANSWERS {
+        INTEGER id PK
+        INTEGER response_id FK
+        INTEGER question_id FK
+        INTEGER option_id FK
+        TEXT text_value
+    }
+
+    SURVEYS ||--o{ QUESTIONS : "has"
+    QUESTIONS ||--o{ OPTIONS : "has"
+    SURVEYS ||--o{ RESPONSES : "receives"
+    RESPONSES ||--o{ ANSWERS : "contains"
+    QUESTIONS ||--o{ ANSWERS : "asked_in"
+    OPTIONS ||--o{ ANSWERS : "selected"
